@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        background: url(https://external-preview.redd.it/SJefHYhTMhsmMdAAfmplMjDtB7LRGf14IkRd7B2R0lY.jpg?auto=webp&s=54db3f60b9e4c709fe91a85c5e246b5d647e1678);
+        background-position: center;
+        background-size: cover;
+      }
+
+      button {
+        background: linear-gradient(45deg, #3292e3, #770df8);
+        padding: 0.7rem 0.8rem;
+        font-size: 1.5rem;
+        border-radius: 16px;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      select {
+        background: linear-gradient(45deg, #3292e3, #770df8);
+        padding: 0.7rem 0.8rem;
+        font-size: 1.5rem;
+        border-radius: 16px;
+        border: none;
+        color: white;
+      }
+      option {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="application/javascript">
+      const playAudio = () => {
+        const value = document.querySelector("#sound").value;
+        fetch(`/play/${value}`);
+      };
+    </script>
+    <div>
+      <select id="sound">
+        <option>moan</option>
+        <option>tuturu</option>
+      </select>
+      <button onclick="playAudio()">play</button>
+    </div>
+  </body>
+</html>
