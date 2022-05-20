@@ -41,6 +41,9 @@
           document.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
         if (value === "gnome")
           document.location = "https://www.youtube.com/watch?v=6n3pFFPSlW4";
+        if (value === "moan" || value === "aaah")
+          document.querySelector("body").style.backgroundImage =
+            "url(https://images.anime-pictures.net/f5b/f5b715e0f3cffe7c86dc39bc5445585f.gif?if=ANIME-PICTURES.NET_-_461687-853x480-valkyrie+drive-arms+corporation-kazami+torino-single-short+hair-breasts.gif)";
         fetch(`/play/${value}`);
       };
     </script>
@@ -59,6 +62,7 @@
         <option>gnome</option>
         <option>amogus</option>
         <option>tbc</option>
+        <option>cats</option>
         <option>aaah</option>
         <option>moan</option>
         <option>rick</option>

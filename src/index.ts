@@ -17,6 +17,7 @@ const server = http.createServer((req, res) => {
 
 	const audio = req.url.replace('/play/', '');
 
+	console.log(`./static/${audio.replace(/[^a-zA-Z]/g, '')}.mp3`);
 	player.play(`./static/${audio.replace(/[^a-zA-Z]/g, '')}.mp3`, {});
 
 	res.writeHead(200);
