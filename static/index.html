@@ -37,17 +37,26 @@
     <script type="application/javascript">
       const playAudio = () => {
         const value = document.querySelector("#sound").value;
+        if (value === "rick")
+          document.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        if (value === "gnome")
+          document.location = "https://www.youtube.com/watch?v=6n3pFFPSlW4";
         fetch(`/play/${value}`);
       };
     </script>
     <div>
       <select id="sound">
-        <option>moan</option>
         <option>tuturu</option>
+        <option>aaah</option>
         <option>yeahbaby</option>
         <option>oof</option>
+        <option>eren</option>
+        <option>gnome</option>
+        <option>amogus</option>
+        <option>moan</option>
         <option>roblox</option>
         <option>bonk</option>
+        <option>rick</option>
       </select>
       <button onclick="playAudio()">play</button>
     </div>
